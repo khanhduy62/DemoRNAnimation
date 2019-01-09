@@ -11,14 +11,14 @@ import {
 export class Spring extends Component {
   constructor () {
     super()
-    this.springValue = new Animated.Value(0.3)
+    this.springValue = new Animated.Value(100)
   }
-  spring () {
-    this.springValue.setValue(0.3)
+  spring = () => {
+    this.springValue.setValue(100)
     Animated.spring(
       this.springValue,
       {
-        toValue: 1,
+        toValue: 250,
         friction: 1,
         tension: 1,
         // speed: 1,
@@ -29,9 +29,10 @@ export class Spring extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={{marginBottom: 100}} onPress={this.spring.bind(this)}>Spring</Text>
+        <Text style={{marginBottom: 100}} onPress={this.spring}>Click</Text>
         <Animated.Image
-          style={{ width: 227, height: 200, transform: [{scale: this.springValue}] }}
+          style={{ width: this.springValue, height: 200, resizeMode: 'stretch' }}
+
           source={require('../assets/images/photo.jpg')} />
       </View>
     )

@@ -11,6 +11,10 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import SingleTimming from './src/components/SingleTiming';
 import MultipleTiming from './src/components/MultipleTiming';
 import Spring from './src/components/Spring';
+import Parralel from './src/components/Parralel';
+import Sequence from './src/components/Sequence';
+import Stagger from './src/components/Stagger';
+import LoveButton from './src/components/LoveButton';
 
 console.disableYellowBox = true;
 type Props = {};
@@ -18,7 +22,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <SingleTimming />
+        <LoveButton />
       </View>
     );
   }
@@ -27,9 +31,8 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   welcome: {
     fontSize: 20,
