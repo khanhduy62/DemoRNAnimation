@@ -15,6 +15,8 @@ import Parralel from './src/components/Parralel';
 import Sequence from './src/components/Sequence';
 import Stagger from './src/components/Stagger';
 import LoveButton from './src/components/LoveButton';
+import CollapseToolbar from './src/components/CollapseToolbar';
+import ScrollableHeader from './src/components/ScrollableHeader';
 
 console.disableYellowBox = true;
 type Props = {};
@@ -22,7 +24,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <LoveButton />
+        <ScrollableHeader />
       </View>
     );
   }
