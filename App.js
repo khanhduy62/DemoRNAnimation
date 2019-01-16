@@ -17,6 +17,7 @@ import Stagger from './src/components/Stagger';
 import LoveButton from './src/components/LoveButton';
 import CollapseToolbar from './src/components/CollapseToolbar';
 import ScrollableHeader from './src/components/ScrollableHeader';
+import AnimFlatlist from './src/components/AnimFlatlist';
 
 console.disableYellowBox = true;
 type Props = {};
@@ -24,7 +25,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollableHeader />
+        <AnimFlatlist />
       </View>
     );
   }

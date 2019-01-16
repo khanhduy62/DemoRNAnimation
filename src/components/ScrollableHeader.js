@@ -121,7 +121,6 @@ export class ScrollableHeader extends Component {
               styles.backgroundImage,
               {
                 opacity: imageOpacity,
-                transform: [{ translateY: imageTranslate }],
               },
             ]}
             source={require('../assets/images/photo.jpg')}
