@@ -18,6 +18,7 @@ import LoveButton from './src/components/LoveButton';
 import CollapseToolbar from './src/components/CollapseToolbar';
 import ScrollableHeader from './src/components/ScrollableHeader';
 import AnimFlatlist from './src/components/AnimFlatlist';
+import Flix from './src/components/Flix';
 
 console.disableYellowBox = true;
 type Props = {};
@@ -25,7 +26,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <AnimFlatlist />
+        <Flix />
       </View>
     );
   }
