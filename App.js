@@ -19,6 +19,7 @@ import CollapseToolbar from './src/components/CollapseToolbar';
 import ScrollableHeader from './src/components/ScrollableHeader';
 import AnimFlatlist from './src/components/AnimFlatlist';
 import Flix from './src/components/Flix';
+import DecayEx from './src/components/DecayEx';
 
 console.disableYellowBox = true;
 type Props = {};
@@ -26,7 +27,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Flix />
+        <DecayEx />
       </View>
     );
   }

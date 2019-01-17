@@ -49,6 +49,7 @@ export default class Flix extends Component {
       onMoveShouldSetPanResponderCapture: () => true,
 
       onPanResponderGrant: (e, gestureState) => {
+        console.log("onPanResponderGrant ", this.state.pan.x._value)
         this.state.pan.setOffset({x: this.state.pan.x._value, y: this.state.pan.y._value});
         this.state.pan.setValue({x: 0, y: 0});
       },
@@ -58,7 +59,7 @@ export default class Flix extends Component {
       ]),
 
       onPanResponderRelease: (e, {vx, vy}) => {
-        this.state.pan.flattenOffset();
+        this.state.pan.flattenOffset(); // chú ý trường này cho việc kéo 
         var velocity;
 
         console.log("vx ", vx)
