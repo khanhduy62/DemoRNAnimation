@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 import SingleTimming from './src/components/SingleTiming';
 import MultipleTiming from './src/components/MultipleTiming';
 import Spring from './src/components/Spring';
@@ -20,15 +20,28 @@ import ScrollableHeader from './src/components/ScrollableHeader';
 import AnimFlatlist from './src/components/AnimFlatlist';
 import Flix from './src/components/Flix';
 import DecayEx from './src/components/DecayEx';
+import Swipeable from './src/components/Swipeable';
 
 console.disableYellowBox = true;
 type Props = {};
+
+const leftContent = <Text>Pull to activate</Text>;
+
+const rightButtons = [
+  <TouchableHighlight><Text>Button 1</Text></TouchableHighlight>,
+  <TouchableHighlight><Text>Button 2</Text></TouchableHighlight>
+];
+
 export default class App extends Component<Props> {
+  
   render() {
     return (
-      <View style={styles.container}>
-        <DecayEx />
-      </View>
+      // <View style={styles.container}>
+      //   <DecayEx />
+      // </View>
+      <Swipeable leftContent={leftContent} rightButtons={rightButtons}>
+        <Text>asdsadsada</Text>
+      </Swipeable>
     );
   }
 }
