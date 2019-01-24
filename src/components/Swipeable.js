@@ -240,7 +240,10 @@ export default class Swipeable extends PureComponent {
       rightActionActivated,
       rightButtonsActivated
     } = this.state;
-    const {dx, vx} = gestureState;
+    const {dx, vx, moveX } = gestureState;
+    console.log("dx ", dx);
+    console.log("moveX ", moveX);
+    console.log("vx ", vx);
     const x = dx + lastOffset.x;
     const canSwipeRight = this._canSwipeRight();
     const canSwipeLeft = this._canSwipeLeft();

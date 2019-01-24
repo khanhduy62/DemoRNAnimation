@@ -21,6 +21,7 @@ import AnimFlatlist from './src/components/AnimFlatlist';
 import Flix from './src/components/Flix';
 import DecayEx from './src/components/DecayEx';
 import Swipeable from './src/components/Swipeable';
+import LayoutAnimationEx from './src/components/LayoutAnimationEx';
 
 console.disableYellowBox = true;
 type Props = {};
@@ -36,12 +37,12 @@ export default class App extends Component<Props> {
   
   render() {
     return (
-      // <View style={styles.container}>
-      //   <DecayEx />
-      // </View>
-      <Swipeable leftContent={leftContent} rightButtons={rightButtons}>
-        <Text>asdsadsada</Text>
-      </Swipeable>
+      <View style={styles.container}>
+        <LayoutAnimationEx />
+      </View>
+      // <Swipeable leftContent={leftContent} rightButtons={rightButtons}>
+      //   <Text>asdsadsada</Text>
+      // </Swipeable>
     );
   }
 }
