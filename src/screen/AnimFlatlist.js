@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet, FlatList, ActivityIndicator } from 'react-native'
 
-import ItemView from './ItemView';
+import ItemView from '../components/ItemView';
 
 export class AnimFlatlist extends Component {
 
